@@ -49,6 +49,9 @@ wget.callbacks.download_child_p = function(urlpos, parent, depth, start_url_pars
   end
 end
 
+wget.callbacks.lookup_host = function(host)
+  return "80.160.88.50"
+end
 
 wget.callbacks.get_urls = function(file, url, is_css, iri)
   local urls = {}
