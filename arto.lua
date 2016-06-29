@@ -185,7 +185,7 @@ wget.callbacks.httploop_result = function(url, err, http_stat)
       tries = 0
       --if string.match(url["url"], "^https?://[^/]*arto%.com") or bad_artodata >= 5 then
       if string.match(url["url"], "^https?://[^/]*arto%.com") then
-        return wget.actions.ABORT
+        return wget.actions.EXIT
       elseif string.match(url["url"], "^https?://[^/]*artodata%.com") then
         bad_artodata = bad_artodata + 1
         print(bad_artodata)
